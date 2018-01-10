@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="scratchios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHl-FG-jnW">
+                                <rect key="frame" x="72" y="45" width="231" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="textfield"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="pkW-pC-ciA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWI-nc-z0c">
+                                <rect key="frame" x="169" y="83" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="clear"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pjn-Ao-DwZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoR-6b-oHR">
+                                <rect key="frame" x="149" y="121" width="77" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="palindrome"/>
+                                <state key="normal" title="Palindrome"/>
+                                <connections>
+                                    <action selector="checkPalindrome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJf-PQ-ZPr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suV-eE-NZU">
+                                <rect key="frame" x="72" y="220" width="231" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="statusfield"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="0Cr-VQ-FXv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Z-BR-m2H">
+                                <rect key="frame" x="160" y="159" width="55" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="reverse"/>
+                                <state key="normal" title="Reverse"/>
+                                <connections>
+                                    <action selector="reverseString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bG-yn-fVH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="suV-eE-NZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Il-5W-VYh"/>
+                            <constraint firstItem="cHl-FG-jnW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="47c-Ar-4ch"/>
+                            <constraint firstItem="EWI-nc-z0c" firstAttribute="top" secondItem="cHl-FG-jnW" secondAttribute="bottom" constant="8" id="6qO-rY-k00"/>
+                            <constraint firstItem="suV-eE-NZU" firstAttribute="top" secondItem="MoR-6b-oHR" secondAttribute="bottom" constant="69" id="DFj-a7-XxI"/>
+                            <constraint firstItem="MoR-6b-oHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEg-QQ-eDx"/>
+                            <constraint firstItem="Z4Z-BR-m2H" firstAttribute="top" secondItem="MoR-6b-oHR" secondAttribute="bottom" constant="8" id="N3R-vT-UUM"/>
+                            <constraint firstItem="EWI-nc-z0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R85-0L-zHM"/>
+                            <constraint firstItem="cHl-FG-jnW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="YMh-ak-NuJ"/>
+                            <constraint firstItem="MoR-6b-oHR" firstAttribute="top" secondItem="EWI-nc-z0c" secondAttribute="bottom" constant="8" id="gY2-uX-rQH"/>
+                            <constraint firstItem="suV-eE-NZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sU1-lh-Shm"/>
+                            <constraint firstItem="Z4Z-BR-m2H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waj-lk-oLl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusfield" destination="suV-eE-NZU" id="I0o-JY-zRB"/>
+                        <outlet property="textfield" destination="cHl-FG-jnW" id="fZ1-Is-9HX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
